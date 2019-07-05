@@ -1,22 +1,16 @@
 //
 //  LocalNotificationCenter.swift
-//  ESR_AppleTV
+//
 //
 //  Created by Severyn-Wsevolod Katolyk on 3/26/18.
-//  Copyright © 2018 GlobalLogic. All rights reserved.
+//  Copyright © 2018 Severyn-Wsevolod Katolyk. All rights reserved.
 //
 
 import Foundation
 
-class LocalNotificationCenter {
+struct LocalNotificationCenter {
     enum Message: String {
-        case appVersionLoadedNotification = "AppVersionLoadedNotification"
-        case loginFinishWithFailNotification = "LoginFinishWithFailNotification" // TODO: (skatolyk) Posted but is never added
-        case hideSideMenu
-        case showSideMenu
-        case resetApplicationNotification
-        case internetIsOn
-        case internetIsDown
+        case willAuthenticate = "willAuthenticate"
         
         var name: NSNotification.Name {
             return NSNotification.Name(rawValue: rawValue)
@@ -29,6 +23,10 @@ class LocalNotificationCenter {
     
     static func post(message: Message, object: Any? = nil, userInfo: [String: Any]? = nil) {
         notificationCenter.post(name: message.name, object: object, userInfo: userInfo)
+    }
+    
+    static func post(name: NSNotification.Name, object: Any? = nil, userInfo: [String: Any]? = nil) {
+        notificationCenter.post(name: name, object: object, userInfo: userInfo)
     }
     
     static func subscribe(observer: Any, selector: Selector, to message: Message) {
@@ -50,4 +48,6 @@ class LocalNotificationCenter {
     static func remove(observer: Any) {
         notificationCenter.removeObserver(observer)
     }
+    
+    private init() { }
 }

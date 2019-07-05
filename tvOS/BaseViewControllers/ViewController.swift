@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  ESR_AppleTV
+//
 //
 //  Created by Severyn-Wsevolod Katolyk on 5/7/18.
-//  Copyright © 2018 GlobalLogic. All rights reserved.
+//  Copyright © 2018 Severyn-Wsevolod Katolyk. All rights reserved.
 //
 
 import UIKit
