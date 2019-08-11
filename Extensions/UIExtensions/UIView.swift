@@ -1,9 +1,9 @@
 //
 //  UIView.swift
-//  vindecoder
+//  
 //
-//  Created by Admin on 2/7/19.
-//  Copyright © 2019 Admin. All rights reserved.
+//  Created by Severyn-Wsevolod Katolyk on 2/7/19.
+//  Copyright © 2019 Severyn-Wsevolod Katolyk. All rights reserved.
 //
 
 import UIKit

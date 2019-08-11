@@ -1,9 +1,9 @@
 //
 //  Dictionary.swift
-//  CellcomTviOSApp
+//  
 //
 //  Created by Severyn-Wsevolod Katolyk on 3/12/19.
-//  Copyright © 2019 Cellcom. All rights reserved.
+//  Copyright © 2019 Severyn-Wsevolod Katolyk. All rights reserved.
 //
 
 import Foundation
