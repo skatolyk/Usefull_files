@@ -20,3 +20,10 @@ extension Array {
         }
     }
 }
+
+extension Array where Element: Equatable {
+    mutating func remove(_ object: Element) {
+        guard let index = firstIndex(of: object) else { return }
+        remove(at: index)
+    }
+}
