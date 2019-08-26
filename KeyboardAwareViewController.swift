@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol KeyboardAwareViewController where Self: UIViewController {
+protocol KeyboardAwareViewController: UIViewController {
     func startListenKeyboardEvents()
     func stopListenKeyboardEvents()
     func keyboardWillChange(height: CGFloat)
