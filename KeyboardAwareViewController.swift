@@ -9,8 +9,6 @@
 import UIKit
 
 protocol KeyboardAwareViewController: UIViewController {
-    func startListenKeyboardEvents()
-    func stopListenKeyboardEvents()
     func keyboardWillChange(height: CGFloat)
 }
 
@@ -27,10 +25,6 @@ extension KeyboardAwareViewController {
     func stopListenKeyboardEvents() {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func keyboardWillChange(height: CGFloat) {
-        
     }
     
     func keyboardWillShow(notification: Notification) {
