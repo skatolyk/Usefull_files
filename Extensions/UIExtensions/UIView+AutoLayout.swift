@@ -2,8 +2,8 @@
 //  UIView+AutoLayout.swift
 //
 //
-//  Created by Severyn-Wsevolod Katolyk on 1/01/2019.
-//  Copyright © 2019 Severyn-Wsevolod Katolyk. All rights reserved.
+//  Created by Seweryn Katolyk on 19.12.2019.
+//  
 //
 
 import UIKit
@@ -52,7 +52,7 @@ extension UIView {
         
     func pinToSuperviewLeft(constantOffset offset: CGFloat = 0) {
         addConstraint(from: .leading, to: .leading, constantOffset: offset)
-    } 
+    }
     
     func pinToSuperviewRight(constantOffset offset: CGFloat = 0) {
         addConstraint(from: .trailing, to: .trailing, constantOffset: offset)
@@ -71,7 +71,7 @@ extension UIView {
     }
 }
 
-private extension UIView {
+extension UIView {
     func addConstraint(from attr1: NSLayoutConstraint.Attribute, to attr2: NSLayoutConstraint.Attribute, view: AnyObject? = nil, multiplier: CGFloat = 1, constantOffset: CGFloat) {
         guard let superview = getSuperview() else { return }
         superview.addConstraint(NSLayoutConstraint(item: self,

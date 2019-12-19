@@ -10,7 +10,7 @@ import Foundation
 
 struct LocalNotificationCenter {
     enum Message: String {
-        case willAuthenticate = "willAuthenticate"
+        case willAuthenticate
         
         var name: NSNotification.Name {
             return NSNotification.Name(rawValue: rawValue)
