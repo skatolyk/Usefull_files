@@ -19,12 +19,15 @@ final class AlertController {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = UIViewController()
-        window.windowLevel = UIWindow.Level.alert
+        window.windowLevel = .alert
         window.makeKeyAndVisible()
         window.rootViewController?.present(alert, animated: true)
     }
     
-    static func showInformation(title: String? = nil, message: String? = nil, actionTitle: String = "OK", callback: Callback? = nil) {
+    static func showInformation(title: String? = nil,
+                                message: String? = nil,
+                                actionTitle: String = Global.Strings.okButtonTitle,
+                                callback: Callback? = nil) {
         let okAction = UIAlertAction(title: actionTitle, style: .cancel) { action in
             callback?(action)
         }
@@ -39,4 +42,6 @@ final class AlertController {
     static func showError(message: String? = nil, actions: [UIAlertAction]) {
         show(title: "Error", message: message, actions: actions)
     }
+    
+    private init() {  }
 }
