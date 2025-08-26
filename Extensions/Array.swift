@@ -9,13 +9,13 @@
 import Foundation
 
 extension Array {
-    subscript (safe index: UInt) -> Element? {
+    subscript (safe index: Array<Element>.Index) -> Element? {
         get {
-            return indices ~= Int(index) ? self[Int(index)] : nil
+            return indices ~= index ? self[index] : nil
         }
         set {
-            if Int(index) < count, let value = newValue {
-                self[Int(index)] = value
+            if index < count, let value = newValue {
+                self[index] = value
             }
         }
     }
